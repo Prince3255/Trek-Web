@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(window.location.pathname)
   if (window.location.pathname == "/Trek-Web/") {
     window.location.replace("/index.html");
   }
