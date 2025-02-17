@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trek Tribe | Blog Detail</title>
+    <link rel="shortcut icon" href="vecteezy_mountain-hike-logo-vector-template_17527994.svg" type="image/svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="blog-detail-section" id="blogDetail">
+            <div class="blog-detail-container" id="blogDetailContainer">
+                <!-- Blog content will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+
+</body>
+    <script type="module">
+        import blogData from './blog-data.js';
+        
+        const blogDetailContainer = document.getElementById('blogDetailContainer');
+        
+        // Get blog ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = parseInt(urlParams.get('id'));
+        
+        // Find the blog post
+        const blog = blogData.find(b => b.id === blogId);
+        
+        if (blog) {
+            document.title = `Trek Tribe | ${blog.title}`;
+            
+            const blogContent = `
+                <div class="blog-detail-header">
+                    <img src="${blog.image}" alt="${blog.title}">
+                </div>
+                <div class="blog-detail-content">
+                    <h1>${blog.title}</h1>
+                    <div class="blog-content">
+                        ${blog.content}
+                    </div>
+                    <a href="blog.html" class="back-button">← Back to Blogs</a>
+                </div>
+            `;
+            
+            blogDetailContainer.innerHTML = blogContent;
+        } else {
+            blogDetailContainer.innerHTML = `
+                <div class="blog-detail-content">
+                    <h1>Blog Not Found</h1>
+                    <p>The requested blog post could not be found.</p>
+                    <a href="blog.html" class="back-button">←&nbsp;Back to Blogs</a>
+                </div>
+            `;
+        }
+    </script>
+    <script src="script.js"></script>
+</html>

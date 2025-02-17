@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trek Tribe | Treks</title>
+    <link
+      rel="shortcut icon"
+      href="vecteezy_mountain-hike-logo-vector-template_17527994.svg"
+      type="image/svg"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="treks-section">
+        <h1>Our Treks</h1>
+        <div class="treks-grid" id="treksGrid">
+          <!-- Trek cards will be populated by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+  </body>
+  <script type="module">
+    import trekData from "./trek-data.js";
+
+    const treksGrid = document.getElementById("treksGrid");
+
+    trekData.forEach((trek) => {
+      const trekCard = `
+              <a href="trek-detail.html?id=${trek.id}" class="trek-card">
+                  <img src="${trek.backgroundImage}" alt="${trek.title}">
+                  <div class="trek-card-content">
+                      <h3>${trek.title}</h3>
+                      <div class="trek-details1">
+                          <span>${trek.duration}</span>
+                          <span>${trek.difficulty}</span>
+                      </div>
+                      <p>${trek.summary}</p>
+                  </div>
+              </a>
+          `;
+      treksGrid.innerHTML += trekCard;
+    });
+  </script>
+  <script src="script.js"></script>
+</html>

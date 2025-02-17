@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trek Tribe | Trek Detail</title>
+    <link
+      rel="shortcut icon"
+      href="vecteezy_mountain-hike-logo-vector-template_17527994.svg"
+      type="image/svg"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main>
+      <div class="hero"></div>
+
+      <div class="content" id="trekDetailContainer1"></div>
+
+      <section class="schedule"></section>
+
+      <div class="trekSummCon">
+        <div class="trek-summary"></div>
+        <div class="trek-content"></div>
+      </div>
+    </main>
+    
+    <div id="footer-container"></div>
+  </body>
+  <script type="module">
+    import trekData from "./trek-data.js";
+
+    const trekDetailContainer = document.getElementById(
+      "trekDetailContainer1"
+    );
+
+    const schedule = document.getElementsByClassName("schedule");
+
+    const hero = document.getElementsByClassName("hero");
+
+    const trekSummary = document.getElementsByClassName("trek-summary");
+
+    const trekContent1 = document.getElementsByClassName("trek-content");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const trekId = parseInt(urlParams.get("id")) || 0;
+
+    const trek = trekData.find((t) => t.id === trekId);
+
+    if (trek) {
+      hero[0].style.backgroundImage = `url("${trek.backgroundImage}")`;
+
+      document.title = `Trek Tribe | ${trek.title}`;
+
+      const trekContent = `
+              <div class="trek-info">
+        <h2>${trek.heading}</h2>
+        <p>${trek.para}</p>
+
+        <div class="trek-details">
+          <div class="detail-item">
+            <span class="icon">📅</span>
+            <div>
+              <h3>Duration</h3>
+              <p>${trek.duration}</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="icon">⚡</span>
+            <div>
+              <h3>Difficulty</h3>
+              <p>${trek.difficulty}</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="icon">👥</span>
+            <div>
+              <h3>Age Group</h3>
+              <p>${trek.ageGroup}</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="icon">🏔️</span>
+            <div>
+              <h3>Max Altitude</h3>
+              <p>${trek.altitude}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <h3>Important Update</h3>
+          <p>${trek.update}</p>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <div class="price">
+          <h2>₹${trek.amount}</h2>
+          <span>/ person</span>
+        </div>
+
+        <div class="includes">
+          <h3>Includes</h3>
+          <div class="features">
+            <div class="feature">
+              <span class="icon">🍽️</span>
+              <span>Food</span>
+            </div>
+            <div class="feature">
+              <span class="icon">🚗</span>
+              <span>Travelling</span>
+            </div>
+            <div class="feature">
+              <span class="icon">🏠</span>
+              <span>Accommodation</span>
+            </div>
+            <div class="feature">
+              <span class="icon">🏥</span>
+              <span>First Aid</span>
+            </div>
+            <div class="feature">
+              <span class="icon">📜</span>
+              <span>GST</span>
+            </div>
+            <div class="feature">
+              <span class="icon">👨‍🏫</span>
+              <span>Instructors</span>
+            </div>
+          </div>
+          <button class="book-now">Book Now</button>
+        </div>
+      </div>
+          `;
+
+      hero[0].innerHTML = `<h1>${trek.title}</h1>`;
+
+      trekSummary[0].innerHTML = `<p>${trek.summary}</p>`;
+
+      trekContent1[0].innerHTML = `${trek.content}`;
+
+      trekDetailContainer.innerHTML = trekContent;
+
+      schedule[0].innerHTML = `<h2>Schedule</h2>
+          ${trek.timeline}`;
+    } else {
+      trekDetailContainer.innerHTML = `
+              <div class="trek-detail-content">
+                  <h1>Trek Not Found</h1>
+                  <p>The requested trek could not be found.</p>
+                  <a href="treks.html" class="back-button">← Back to Treks</a>
+              </div>
+          `;
+    }
+  </script>
+  <script src="script.js"></script>
+</html>
