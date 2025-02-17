@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname === "/Trek-Web/") {
+    window.location.replace("/index.html");
+  }
+
   fetch("header.html")
     .then((response) => response.text())
     .then((data) => {
