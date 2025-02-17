@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.getElementById("header-container").innerHTML = data;
       otherDetail()
-      if (window.location.pathname.split('/').pop().includes('index')) {
+      if (window.location.pathname.split('/').pop().includes('index' || '')) {
         initializeSwiper();
       }
       applyActiveClass();
