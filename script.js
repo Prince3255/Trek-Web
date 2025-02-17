@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname == "/Trek-Web/") {
-    window.location.replace("/Trek-Web/index.html");
+  if (window.location.pathname === "/Trek-Web/" || window.location.pathname === "/Trek-Web") {
+    window.history.replaceState(null, "", "/Trek-Web/index.html");
   }
 
   fetch("header.html")
