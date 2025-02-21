@@ -1553,7 +1553,7 @@ nav {
   letter-spacing: 2px;
 }
 
-.booking-card {
+.booking-card1 {
   display: flex;
   background-color: #fff;
   border-radius: 8px;
@@ -1562,7 +1562,7 @@ nav {
   margin-bottom: 2rem;
 }
 
-.booking-card img {
+.booking-card1 img {
   width: 300px;
   height: 200px;
   object-fit: cover;
@@ -1741,7 +1741,7 @@ footer {
     margin-top: 30px;
   }
 
-  .booking-card {
+  .booking-card1 {
     display: block;
   }
 
@@ -1749,7 +1749,7 @@ footer {
     overflow-x: hidden;
   }
 
-  .booking-card img {
+  .booking-card1 img {
     width: 100vw;
     height: 300px;
     object-fit: cover;
