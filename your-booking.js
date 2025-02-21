@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!trek) return "";
 
         return `
-        <div class="booking-card">
+        <div class="booking-card1">
           <img src="${trek.backgroundImage}" alt="${trek.title}">
           <div class="booking-info">
             <h2>${trek.title}</h2>
