@@ -26,6 +26,27 @@ function otherDetail() {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
+  const buttons = document.querySelectorAll('.book-now');
+
+  if (buttons) {
+    buttons.forEach(button => {
+      button.addEventListener('click', (event) => {
+        const trekId = event.target.getAttribute('data-trek-id');
+    
+        if (trekId) {
+          let trekBookings = JSON.parse(localStorage.getItem('trekBookings')) || [];
+    
+          if (trekBookings) {
+            if (!trekBookings?.includes(trekId)) {
+              trekBookings.push(trekId);
+            }
+          }
+    
+          localStorage.setItem('trekBookings', JSON.stringify(trekBookings));
+        }
+      });
+    });
+  }
   
   if (burger) {
     burger.addEventListener("click", () => {

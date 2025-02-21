@@ -133,7 +133,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 70%;
 }
 
 .nav-links li {
@@ -158,12 +158,6 @@ nav {
 }
 
 /* Add styles for scrolled header */
-
-/* Adjust main content to account for fixed header */
-main {
-  /* padding-top: 80px; */
-}
-
 .burger {
   display: none;
   cursor: pointer;
@@ -177,39 +171,18 @@ main {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   .nav-links {
-    width: 60%;
+    width: 85%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
+@media screen and (max-width: 900px) {
   .nav-links {
-    position: fixed;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.95
-    ); /* Semi-transparent white background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    width: 88%;
   }
   .nav-links li {
-    opacity: 0;
-  }
-  .burger {
-    display: block;
+    margin: 0px 1px;
   }
 }
 
@@ -380,22 +353,6 @@ main {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive design for Gallery page */
-@media screen and (max-width: 768px) {
-  .gallery-section {
-    padding: 4rem 5% 2rem;
-  }
-
-  .gallery-section h1 {
-    font-size: 2rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-}
-
 /* Hero Carousel styles */
 .hero-carousel {
   height: 100vh;
@@ -534,33 +491,6 @@ main {
   top: 0;
 }
 
-/* Responsive design for About Us page */
-@media screen and (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    padding: 4rem 5% 2rem;
-  }
-
-  .about-content {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-
-  .about-image {
-    order: -1;
-    margin-bottom: 2rem;
-  }
-
-  .about-content h1 {
-    font-size: 2rem;
-  }
-
-  .about-content p,
-  .about-content ul li {
-    font-size: 1rem;
-  }
-}
-
 /* Blog Page Styles */
 .blog-section {
   padding: 8rem 5% 6rem;
@@ -643,24 +573,6 @@ main {
   background-color: #e64a19;
 }
 
-@media screen and (max-width: 768px) {
-  .blog-section {
-    padding: 4rem 5% 2rem;
-  }
-
-  .blog-section h1 {
-    font-size: 2rem;
-  }
-
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .blog-card-content {
-    min-height: 180px;
-  }
-}
-
 /* Blog Detail Page Styles */
 .blog-detail-section {
   padding: 8rem 5% 6rem;
@@ -737,26 +649,6 @@ main {
 .back-button:hover {
   background-color: #e64a19;
 }
-
-/* Responsive design for Blog Detail page */
-@media screen and (max-width: 768px) {
-  .blog-detail-section {
-    padding: 4rem 5% 2rem;
-  }
-
-  .blog-detail-header {
-    height: 250px;
-  }
-
-  .blog-detail-content h1 {
-    font-size: 2rem;
-  }
-
-  .blog-content h2 {
-    font-size: 1.5rem;
-  }
-}
-
 
 /* Trek Detail Page Styles */
 /* Trek Section Styles */
@@ -862,31 +754,6 @@ main {
 .cta-button:hover {
   background-color: #e64500;
 } */
-
-/* Responsive design for Treks page */
-@media screen and (max-width: 768px) {
-  .treks-section {
-    padding: 4rem 1rem 2rem;
-  }
-
-  .treks-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .treks-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .trek-card-content {
-    padding: 1.25rem;
-  }
-
-  .trek-card-content h3 {
-    font-size: 1.5rem;
-  }
-}
 
 /* Trek Detail */
 .hero {
@@ -1011,7 +878,7 @@ main {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -1156,11 +1023,11 @@ main {
   .content {
     grid-template-columns: 1fr;
   }
-  
+
   .hero h1 {
     font-size: 3rem;
   }
-  
+
   .booking-card {
     position: static;
   }
@@ -1183,14 +1050,6 @@ main {
     font-size: 1.5rem;
   }
 }
-
-
-
-
-
-
-
-
 
 .gallery-item:hover::after {
   opacity: 1;
@@ -1569,21 +1428,6 @@ main {
   line-height: 1.6;
 }
 
-/* Responsive design for Services page */
-@media screen and (max-width: 768px) {
-  .services-section {
-    padding: 4rem 5% 2rem;
-  }
-
-  .services-section h1 {
-    font-size: 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Contact Page Styles */
 .contact-section {
   padding: 8rem 5% 6rem;
@@ -1693,6 +1537,66 @@ main {
   color: #ff5722;
 }
 
+/* Your booking style */
+.your-bookings {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 5% 6rem;
+}
+
+.your-bookings h1 {
+  font-size: 3rem;
+  color: #ff5722;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.booking-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.booking-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.booking-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.booking-info h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.booking-info p {
+  margin-bottom: 0.5rem;
+}
+
+.view-details-btn {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #f4511e;
+}
+
 /* Footer styles */
 footer {
   background-color: #333;
@@ -1737,8 +1641,222 @@ footer {
   border-top: 1px solid #555;
 }
 
-/* Responsive design */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @media screen and (max-width: 768px) {
+  /* header section */
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    padding: 0.4rem 4%;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.95
+    ); /* Semi-transparent white background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+
+  .trek-overlay {
+    position: static;
+    text-align: center;
+    transform: translateY(0%);
+    background: none;
+  }
+
+  /* gallery section */
+  .gallery-section {
+    padding: 4rem 5% 2rem;
+    margin-top: 30px;
+  }
+
+  .gallery-section h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  /* about section */
+  .about-section {
+    flex-direction: column;
+    padding: 4rem 5% 2rem;
+    margin-top: 40px;
+  }
+
+  .about-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p,
+  .about-content ul li {
+    font-size: 1rem;
+  }
+
+  /* booking */
+  .your-bookings {
+    padding: 4rem 5% 6rem;
+    margin-top: 30px
+  }
+  
+  .booking-card {
+    flex-direction: column;
+  }
+  
+  .booking-card img {
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .booking-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+
+  /* blog scetion */
+  .blog-section {
+    padding: 4rem 5% 2rem;
+    margin-top: 30px;
+  }
+
+  .blog-section h1 {
+    font-size: 2rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card-content {
+    min-height: 180px;
+  }
+
+  /* blog detail page */
+  .blog-detail-section {
+    padding: 4rem 5% 2rem;
+  }
+
+  .blog-detail-header {
+    height: 250px;
+  }
+
+  .blog-detail-content h1 {
+    font-size: 2rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.5rem;
+  }
+
+  /* trek section */
+  .treks-section {
+    padding: 4rem 5% 2rem;
+    margin-top: 30px;
+  }
+
+  .treks-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .treks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .trek-card-content {
+    padding: 1.25rem;
+  }
+
+  .trek-card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  /* trek detail */
+  .day-marker {
+    position: static;
+    gap: 0;
+  }
+
+  .day-image {
+    width: 100%;
+  }
+
+  .timeline {
+    padding: 0;
+  }
+
+  /* service section */
+  .services-section {
+    padding: 4rem 5% 2rem;
+    margin-top: 30px;
+  }
+
+  .services-section h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* contact section */
+  .contact-section {
+    padding: 4rem 5% 2rem;
+    margin-top: 30px;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container .contact-info {
+    order: 1;
+  }
+  .contact-container .contact-form {
+    order: 2;
+  }
+
+  /* header and footer */
   .nav-links {
     position: fixed;
     right: 0px;
@@ -1816,16 +1934,5 @@ footer {
   .footer-section {
     flex-basis: 100%;
     margin-right: 0;
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
   }
 }
