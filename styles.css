@@ -53,8 +53,15 @@ nav {
   padding: 1rem 5%;
 }
 
-.logo img {
+.logo {
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
+  font-size: xx-large;
+  letter-spacing: 1.5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   /* filter: brightness(0) invert(1); */
 }
 
